@@ -31,10 +31,7 @@ def predict():
 
 
 if __name__ == '__main__':
-    try:
-        port = int(sys.argv[1])  # This is for a command-line input
-    except BaseException:
-        port = 12345  # If you don't provide any port the port will be set to 12345
+
 
     regr = joblib.load("model.pkl")  # Load "model.pkl"
     print('Model loaded')
@@ -42,4 +39,4 @@ if __name__ == '__main__':
     model_columns = joblib.load("model_columns.pkl")
     print('Model columns loaded')
 
-    app.run(port=port, debug=True)
+    app.run(debug=True)
