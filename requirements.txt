@@ -4,4 +4,5 @@ jsonify
 joblib
 pandas
 numpy
+uwsgi
 gunicorn
