@@ -1,7 +1,6 @@
 # Dependencies
 from flask import Flask, request, jsonify
-pip install joblib
-import joblib
+from sklearn.externals import joblib
 import traceback
 import pandas as pd
 import numpy as np
