@@ -1,5 +1,6 @@
 # Dependencies
 from flask import Flask, request, jsonify
+pip install joblib
 import joblib
 import traceback
 import pandas as pd
