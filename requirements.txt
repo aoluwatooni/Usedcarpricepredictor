@@ -1,9 +1,8 @@
 Flask
-Flask-RESTful
-Flask-SQLAlchemy
-uwsgi
-joblib
 request
+jsonify
 joblib
-pd
-np
+traceback
+pandas
+numpy
+gunicorn
