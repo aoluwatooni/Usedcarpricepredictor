@@ -5,6 +5,5 @@ uwsgi
 joblib
 request
 joblib
-traceback
 pd
 np
