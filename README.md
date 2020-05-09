@@ -1,6 +1,6 @@
 # Usedcarpricepredictor
 
-###Problem
+Problem
 
 Your company is in the business of second-hand vehicle sales.
 It helps owners and renters predicts the price range to value a vehicle.
@@ -8,7 +8,7 @@ It helps shoppers plan for their car needs.
 
 Currently, there is now easy way to do #1, #2. Owners basically browse through their onlistings to determine what  to value their car.
 
-###Solution
+Solution
 
 As a Software Engineer - ML, you are tasked to build an automated service (web) to constantly update a prediction model with happenings in the marketplace so that, at every point in time, users can get semi-accurate prediction of the prices of proposed cars or advice them to make price adjustments for existing ones.
 
