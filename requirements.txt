@@ -4,7 +4,6 @@ Flask-SQLAlchemy
 uwsgi
 joblib
 request
-jsonify
 joblib
 traceback
 pd
