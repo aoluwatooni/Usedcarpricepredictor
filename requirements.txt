@@ -2,7 +2,6 @@ Flask
 request
 jsonify
 joblib
-traceback
 pandas
 numpy
 gunicorn
