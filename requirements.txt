@@ -6,3 +6,5 @@ pandas
 numpy
 uwsgi
 gunicorn
+sklearn
+sklearn.external
