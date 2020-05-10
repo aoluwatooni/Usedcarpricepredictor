@@ -11,14 +11,14 @@ app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    if regr:
+    if joblib.load("model.pkl"):
         try:
             json_ = request.json
             print(json_)
             query = pd.get_dummies(pd.DataFrame(json_))
-            query = query.reindex(columns=model_columns, fill_value=0)
+            query = query.reindex(columns=joblib.load("model_columns.pkl"), fill_value=0)
 
-            prediction = list(regr.predict(query))
+            prediction = list(joblib.load("model.pkl").predict(query))
 
             return jsonify({'prediction': str(prediction)})
 
