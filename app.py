@@ -11,12 +11,12 @@ app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    if regr:
+    if joblib.load("model.pkl"):
         try:
             json_ = request.json
             print(json_)
             query = pd.get_dummies(pd.DataFrame(json_))
-            query = query.reindex(columns=model_columns, fill_value=0)
+            query = query.reindex(columns=joblib.load("model_columns.pkl"), fill_value=0)
 
             prediction = list(regr.predict(query))
 
@@ -33,7 +33,7 @@ def predict():
 if __name__ == '__main__':
 
 
-    regr = joblib.load("model.pkl")  # Load "model.pkl"
+    joblib.load("model.pkl") = joblib.load("model.pkl")  # Load "model.pkl"
     print('Model loaded')
     # Load "model_columns.pkl"
     model_columns = joblib.load("model_columns.pkl")
