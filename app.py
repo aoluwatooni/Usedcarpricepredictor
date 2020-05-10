@@ -11,14 +11,14 @@ app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    if joblib.load("model.pkl"):
+    if regr:
         try:
             json_ = request.json
             print(json_)
             query = pd.get_dummies(pd.DataFrame(json_))
-            query = query.reindex(columns=joblib.load("model_columns.pkl"), fill_value=0)
+            query = query.reindex(columns=model_columns, fill_value=0)
 
-            prediction = list(joblib.load("model.pkl").predict(query))
+            prediction = list(regr.predict(query))
 
             return jsonify({'prediction': str(prediction)})
 
@@ -31,7 +31,10 @@ def predict():
 
 
 if __name__ == '__main__':
-
+    try:
+        port = int(sys.argv[1])  # This is for a command-line input
+    except BaseException:
+        port = 12345  # If you don't provide any port the port will be set to 12345
 
     regr = joblib.load("model.pkl")  # Load "model.pkl"
     print('Model loaded')
@@ -39,4 +42,4 @@ if __name__ == '__main__':
     model_columns = joblib.load("model_columns.pkl")
     print('Model columns loaded')
 
-    app.run(debug=True)
+    app.run(port=port, debug=True)
