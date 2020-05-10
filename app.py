@@ -5,6 +5,7 @@ import traceback
 import pandas as pd
 import numpy as np
 regr = joblib.load("model.pkl")  # Load "model.pkl"
+model_columns = joblib.load("model_columns.pkl") # Load "model_columns.pkl"
 
 # Your API definition
 app = Flask(__name__)
