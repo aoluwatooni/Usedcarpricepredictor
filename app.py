@@ -33,7 +33,6 @@ def predict():
 if __name__ == '__main__':
 
 
-    joblib.load("model.pkl") = joblib.load("model.pkl")  # Load "model.pkl"
     print('Model loaded')
     # Load "model_columns.pkl"
     model_columns = joblib.load("model_columns.pkl")
