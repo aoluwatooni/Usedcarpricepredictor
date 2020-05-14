@@ -17,3 +17,6 @@ Also one could also be able to predict what a car might have sold 4 months ago b
 The marketplace are the available car listing services.
 
 Provide an authenticated api to access the service.
+
+Solved. Here's the authenticated api to access the service
+https://oadebiyi-usedcarpricepredictor.herokuapp.com
